@@ -31,14 +31,14 @@ public abstract class EntityLivingBaseMixin extends Entity implements EntityLivi
 
     @Inject(method = "attackEntityFrom", at = @At("HEAD"))
     private void attackEntityFromFirst(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        if (source instanceof EntityDamageSourceIndirect && source.getTrueSource() instanceof EntityLivingBaseInvoker && source.getImmediateSource() instanceof EntityArrow) {
+        if (!this.world.isRemote && source instanceof EntityDamageSourceIndirect && source.getTrueSource() instanceof EntityLivingBaseInvoker && source.getImmediateSource() instanceof EntityArrow) {
             ((EntityLivingBaseInvoker) source.getTrueSource()).setCritical(((EntityArrow) source.getImmediateSource()).getIsCritical());
         }
     }
 
     @Inject(method = "attackEntityFrom", at = @At("RETURN"))
     private void attackEntityFrom$Return(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        if (source.getTrueSource() instanceof EntityLivingBaseInvoker) {
+        if (!this.world.isRemote && source.getTrueSource() instanceof EntityLivingBaseInvoker) {
             ((EntityLivingBaseInvoker) source.getTrueSource()).setCritical(false);
         }
     }
