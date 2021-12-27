@@ -8,11 +8,11 @@ import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = CriticaLib.MOD_ID, name = CriticaLib.MOD_NAME, version = CriticaLib.VERSION)
+@Mod(modid = CriticaLib.MOD_ID, name = CriticaLib.MOD_NAME, version = CriticaLib.VERSION, updateJSON = "https://raw.githubusercontent.com/hamusuke0323/CriticaLibForge/update/update.json")
 public class CriticaLib {
     public static final String MOD_ID = "criticalib";
     public static final String MOD_NAME = "CriticaLib";
-    public static final String VERSION = "1.0.1";
+    public static final String VERSION = "1.0.2";
 
     public CriticaLib() {
         MinecraftForge.EVENT_BUS.register(this);

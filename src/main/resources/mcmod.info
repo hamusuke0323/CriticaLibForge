@@ -5,8 +5,8 @@
     "description": "${mod_description}",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "",
-    "updateUrl": "",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/forge-criticalib",
+    "updateUrl": "https://raw.githubusercontent.com/hamusuke0323/CriticaLibForge/update/update.json",
     "authorList": [
       "hamusuke2303"
     ],
