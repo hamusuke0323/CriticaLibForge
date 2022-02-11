@@ -14,7 +14,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.16.5' + "${modVersion}"
+version = '1.16.5-' + "${modVersion}"
 group = 'com.hamusuke.criticalib' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'criticalib-forge'
 
